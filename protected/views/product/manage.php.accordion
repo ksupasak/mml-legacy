@@ -1,0 +1,48 @@
+<?php
+$this->pageTitle=Yii::app()->name . ' - Manage Products';
+$this->breadcrumbs=array(
+		'Manage Products'=>array('ManageProducts') 
+	);
+?>
+<h1>Manage Products</h1>
+<div class="grid_2 suffix_8">
+	<a href="AddProduct" id="new-product" class="yui-button">New Product</a>
+</div>
+
+<style>
+#products { max-height: 20em; } 
+</style>
+<?php 
+/* Accordion*/
+$prod = Product::model(); 
+$cat = Category::model();
+?>
+<div id="products">
+	<h2>Compounded</h2>
+	<div class="accordion">
+		<?php foreach( $cat->find('name=:n',array(':n'=>'Compounded'))->children as $category ) :?>
+			<h3><a href="#"><?php echo $category->name; ?></a></h3>
+			<div>
+				<?php foreach ($category->products as $product) :?>
+					<div><?php echo $product->display_name ?></div>
+				<?php endforeach; ?>
+			</div>
+		<?php endforeach; ?>
+	</div>
+	
+	<h2>Dispensed</h2>
+	<div class="accordion">
+		<h3>Dispensed</h3>
+		<div>
+				<?php foreach ($cat->find('name=:n',array(':n'=>'Dispensed'))->products as $product) :?>
+					<div><?php echo $product->display_name ?></div>
+				<?php endforeach; ?>
+		</div>
+	</div>
+</div>
+
+<script>
+	$(document).ready( function() {
+			$("#products .accordion").accordion({collapsible: true, active: false });
+		} );
+</script>

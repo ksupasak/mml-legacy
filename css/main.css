@@ -1,0 +1,303 @@
+/**
+ *  Max MaxLife master CSS file
+ */
+
+body
+{
+	margin: 0;
+	padding: 0;
+	color: #555;
+	font: normal 10pt Arial,Helvetica,sans-serif;
+	background: #EFEFEF;
+}
+
+#page
+{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	background: white;
+	border: 1px solid #C9E0ED;
+}
+
+#header {
+	height: 54px; 				/* Logo is 42px. Add 12px for graphics/effects */
+	position: relative;
+	height: 48px;
+}
+#header h1, #header h2 { 
+	margin: 0; padding: 0; position: absolute;
+} 
+#header h1 {
+	top: 0px; left: 0px;
+}
+#header-user {
+	width: 14em;
+	float: right;
+}
+#header-user .profile { 
+	background: url(../images/icon/user_profile.gif) no-repeat right; 
+	padding-right: 1em; margin-right: 1em; 
+	}
+
+
+#content
+{
+    padding: 20px;
+}
+
+#sidebar
+{
+	padding: 20px;
+}
+
+#footer
+{
+	padding: 10px;
+	margin: 10px 20px;
+	font-size: 1em;
+	text-align: center;
+	border-top: 1px solid #C9E0ED;
+}
+
+
+#mainmenu
+{
+	margin: 1em;
+	//background:white url(bg.gif) repeat-x left top;
+	border-bottom: groove 3px #333;
+}
+
+#mainmenu ul
+{
+	padding: 0 30px;
+	margin:0px;
+}
+
+#mainmenu ul li
+{
+	display: inline;
+}
+
+#mainmenu ul li a
+{
+	color:#ffffff;
+	background: url(../images/tab.png) bottom center no-repeat;
+	font-size:100%;
+	font-weight:bold;
+	text-decoration:none;
+    padding: 16px 42px 0px 42px;
+}
+
+#mainmenu ul li a:hover, #mainmenu ul li.active a
+{
+	//color: #6399cd;
+	color: #FF6666;
+	background: url(../images/tab-current.png) bottom center no-repeat;
+	text-decoration:none;
+}
+
+div.flash-error, div.flash-notice, div.flash-success
+{
+	padding:.8em;
+	margin-bottom:1em;
+	border:2px solid #ddd;
+}
+
+div.flash-error
+{
+	background:#FBE3E4;
+	color:#8a1f11;
+	border-color:#FBC2C4;
+}
+
+div.flash-notice
+{
+	background:#FFF6BF;
+	color:#514721;
+	border-color:#FFD324;
+}
+
+div.flash-success
+{
+	background:#E6EFC2;
+	color:#264409;
+	border-color:#C6D880;
+}
+
+div.flash-error a
+{
+	color:#8a1f11;
+}
+
+div.flash-notice a
+{
+	color:#514721;
+}
+
+div.flash-success a
+{
+	color:#264409;
+}
+
+div.form .rememberMe label
+{
+	display: inline;
+}
+
+div.view
+{
+	padding: 10px;
+	margin: 10px 0;
+	border: 1px solid #C9E0ED;
+}
+
+div.breadcrumbs
+{
+	font-size: 0.9em;
+	padding: 5px 20px;
+}
+
+div.breadcrumbs span
+{
+	font-weight: bold;
+}
+
+.portlet
+{
+
+}
+
+.portlet-decoration
+{
+	padding: 3px 8px;
+	background: #B7D6E7;
+	border-left: 5px solid #6FACCF;
+}
+
+.portlet-title
+{
+	font-size: 12px;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+	color: #298dcd;
+}
+
+.portlet-content
+{
+	font-size:0.9em;
+	margin: 0;
+	padding: 5px 8px;
+	margin-bottom:15px;
+	background:#EFFDFF;
+}
+
+.portlet-content ul
+{
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	margin: 0;
+	padding: 0;
+}
+
+.portlet-content li
+{
+	padding: 2px 0 4px 0px;
+}
+
+.post
+{
+	margin: 0 0 20px;
+}
+
+.post .title
+{
+	font-size: 1.5em;
+	border-bottom: 1px solid #C9E0ED;
+}
+
+.post .title a
+{
+	color: #555;
+	text-decoration: none;
+}
+
+.post .author
+{
+	color: #888;
+	margin: 0 0 5px;
+}
+
+.post .nav
+{
+	-moz-border-radius:7px;
+	padding: 5px;
+	background: #EFFDFF;
+}
+
+.comment
+{
+	-moz-border-radius:7px;
+	padding: 10px;
+	background: #F5F5F5;
+	margin: 5px 0;
+}
+
+.comment .content
+{
+	margin: 10px 0;
+}
+
+.comment .author
+{
+	margin: 5px 0;
+	padding: 0 0 3px;
+	border-bottom: 1px solid #DDD;
+}
+
+.comment .time
+{
+	color: #888;
+	font-size: 0.8em;
+}
+
+.comment a.cid
+{
+	color:#CCC;
+	float:right;
+	font-size:1.5em;
+	font-weight:bold;
+	padding:0 5px 5px 5px;
+	text-decoration: none;
+}
+
+.comment a.cid:hover
+{
+	color:#555;
+}
+
+.comment .pending
+{
+	color:red;
+}
+
+.content {
+	position: relative;
+}
+
+#flash {
+	position: absolute; width:40em; 
+	top:0em; right:1em;
+	padding: 0.7em;
+}
+
+/* GridView adjustment */
+div#yw0.grid-view .summary, div#yw0.grid-view .pager { text-align: left; }
+
+
+.grid-view table.items tr.odd {
+background: #cfeafa;
+}
+
+
