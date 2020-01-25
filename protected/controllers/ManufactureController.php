@@ -47,6 +47,7 @@ class ManufactureController extends Controller {
 		$criteria = new CDbCriteria;
 		$criteria->compare('status_id',Status::COMPLETE);
 		$criteria->addCondition('station_id > 100');
+		$criteria->limit = 100;
 		$completeOrders->criteria = $criteria;
 		
 		$params= array('newOrders'=>$newOrders,'currentOrders'=>$currentOrders,'completeOrders'=>$completeOrders);
