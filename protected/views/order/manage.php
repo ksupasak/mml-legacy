@@ -91,7 +91,7 @@ $this->breadcrumbs=array('Manage Orders'=>array('order/ManageOrders'), 'Auto Upd
 <div id="payment-list"  >
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 			'dataProvider'=>	$order->statusUpdated(Status::COMPLETE, false, 100),
-			'template' => '	<h3>Complete Processing Orders</h3>
+			'template' => '	<h3>Complete Processing Orders.</h3>
 			{pager} {items}  {summary}',
 			'columns' => $columns
 		)); ?>
