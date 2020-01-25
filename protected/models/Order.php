@@ -589,7 +589,9 @@ class Order extends CActiveRecord
 		$filter->criteria->distinct = true;
 		$filter->criteria->compare('status_id',$status_id);
 		$filter->criteria->alias = 'orders';
-		$filter->criteria->join = 'INNER JOIN order_logs ON order_logs.order_id = orders.id';
+		// $filter->criteria->join = 'INNER JOIN order_logs ON order_logs.order_id = orders.id';
+		$filter->criteria->join = 'INNER JOIN (select updated, order_id from order_logs group by order_id order by updated desc) order_logs ON order_logs.order_id = orders.id';
+		
 		$filter->criteria->order = 'order_logs.updated DESC';
 		$filter->criteria->limit = $limit;
 		return $filter;

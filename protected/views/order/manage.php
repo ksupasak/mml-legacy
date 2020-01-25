@@ -126,7 +126,7 @@ curtime=curmin+" minutes and "+cursec+" seconds left until page refresh!"
 else
 curtime=cursec+" seconds left until page refresh!"
 window.status=curtime
-setTimeout("beginrefresh()",1000)
+setTimeout("beginrefresh()",10000)
 }
 }
 
