@@ -49,13 +49,13 @@ if(isset(Yii::app()->session['user.id'])){
 	
 	<td>
 	<?php 
-	 
-	 if(isset($data->minimum)&&$data->getCurrentInventory()<$data->minimum):
+	$inventory = $data->getCurrentInventory();
+	 if(isset($data->minimum)&&$inventory<$data->minimum):
 	echo '<span style="color:red">';
 	else:
 	echo '<span>';
 	endif;
-	echo $data->getCurrentInventory(); ?>
+	echo $inventory; ?>
 	</span>
 	</td>
 	<td>
