@@ -177,7 +177,7 @@ background:#ccc;
 					        $adj = 0.735*1000;
 						    break;
 						case "d_gamma":
-						 	$adj = 1/0.15*1000;
+						 	$adj = 0.9*1000;
 					}
 					// var_dump($p->display_name.$adj);
 					
