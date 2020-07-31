@@ -560,7 +560,7 @@ class Order extends CActiveRecord
 		if (isset($this->items)) {
 			$items = array();
 			foreach ($this->items as $item) {
-				if($item->order_per_day>0){
+				if($item->order_per_day>0 && $item->product->soldout != 1){
 				$items[$item->product->id] = $item;
 				}
 			}
