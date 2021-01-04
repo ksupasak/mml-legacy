@@ -828,6 +828,7 @@ class Order extends CActiveRecord
 				        break;
 				    case "vitamin_d":
 				        $adj = 0.025;
+						$adj = 10.0;
 				        break;
 				    case "vitamin_e":
 			#	        $adj = 0.735*1000;
